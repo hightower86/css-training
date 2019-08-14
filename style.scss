@@ -25,8 +25,10 @@ body {
   background-color: #333;
   color: #fff;
   padding: 10px 15px;
-  border-radius: 0.3rem;
+  // border-radius: 0.3rem;
   border: none;
+  border: #000 solid 1px;
+  box-sizing: border-box;
 
   &:hover {
     background-color: rgb(255, 255, 255);
@@ -155,4 +157,46 @@ a {
   padding: 15px;
   box-sizing: border-box;
   margin-top: 10px;
+}
+.p-box {
+  width: 800px;
+  height: 500px;
+  border: 1px solid #000;
+  position: relative;
+  background-image: url("./images/bg");
+  background-position: 10px 20px;
+  background-repeat: no-repeat;
+  background-position: center top;
+
+  h1 {
+    position: absolute;
+    top: 40px;
+    left: 100px;
+  }
+  h2 {
+    position: absolute;
+    bottom: 40px;
+    right: 100px;
+  }
+}
+.fix-me {
+  position: fixed;
+  top: 400px;
+}
+
+.my-list {
+  li {
+    &:first-child {
+      background-color: #ccc;
+    }
+    &:last-child {
+      background-color: red;
+    }
+    &:nth-child(3) {
+      background-color: green;
+    }
+    &:nth-child(even) {
+      background-color: grey;
+    }
+  }
 }
